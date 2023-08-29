@@ -1,0 +1,25 @@
+﻿<Window x:Name="Players_NBA_app" x:Class="NBAPLayersApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NBAPLayersApp"
+        mc:Ignorable="d"
+        Title="NBA Players App" Height="450" Width="500">
+
+    <Grid>
+
+        <ComboBox x:Name="comboBoxPositions" HorizontalAlignment="Left" Margin="257,48,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxPositions_SelectionChanged" Grid.ColumnSpan="2">
+            <!-- ItemsSource and SelectedIndex will be set programmatically -->
+        </ComboBox>
+        <Button x:Name="buttonPrevious" Content="Previous" HorizontalAlignment="Left" Margin="108,329,0,0" VerticalAlignment="Top" Click="buttonPrevious_Click" IsEnabled="False" Width="120" Height="25"/>
+        <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" Margin="257,329,0,0" VerticalAlignment="Top" Click="buttonNext_Click" Width="120" Height="25"/>
+        <ListBox x:Name="listBoxPlayers" Margin="108,75,108,100.5"  ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
+            <!-- ItemsSource will be set programmatically -->
+        </ListBox>
+        <Label x:Name="labelPlayers" Content="Players" HorizontalAlignment="Center" Margin="156,0,170,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.976,0.253" Width="169" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelComboBox" Content="Filter by position" HorizontalAlignment="Left" Margin="108,44,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="buttonExit" Content="Exit" HorizontalAlignment="Left" Margin="108,364,0,0" VerticalAlignment="Top" Width="269" Height="24" Click="buttonExit_Click"/>
+
+    </Grid>
+</Window>
